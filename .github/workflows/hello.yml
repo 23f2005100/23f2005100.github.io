@@ -1,0 +1,25 @@
+name: My First Action with Email
+
+on: [push]  # Triggers on any code push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Free kitchen machine
+    steps:
+    - name: Checkout code  # Grabs your repo files
+      uses: actions/checkout@v4
+    
+    - name: 23f2005100@ds.study.iitm.ac.in  # Your required step!
+      run: echo "Hello from my GitHub Action!"
+
+
+
+
+
+
+
+
+
+
+
+
