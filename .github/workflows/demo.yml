@@ -9,8 +9,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: prime-cache-4f7de3c
+      - id: cache-step
+        name: prime-cache-4f7de3c
         uses: actions/cache@v4
         with:
           key: cache-4f7de3c
-          path: ~/.cache/demo  # Dummy path; anything works for this test
+          path: ~/.cache/demo
+
+      - name: Echo cache result
+        run: echo "Cache hit/miss: ${{ steps.cache-step.outputs.cache-hit }}"
